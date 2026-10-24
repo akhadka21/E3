@@ -69,3 +69,35 @@ spin.addEventListener("click", () => {
     { duration: 800, easing: "ease-in-out" },
   );
 });
+
+const defsHtml = `
+<defs>
+    <linearGradient id="cheek-shade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff0000" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+`;
+for (let i = 0; i < 2; i++) {
+  face.insertAdjacentHTML("beforeend", defsHtml);
+  const cheek = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "ellipse",
+  );
+  cheek.setAttribute("cx", `${55 + i * 100}`);
+  cheek.setAttribute("cy", "120");
+  cheek.setAttribute("rx", "10");
+  cheek.setAttribute("ry", "20");
+  cheek.setAttribute("fill", "url(#cheek-shade)");
+  face.append(cheek);
+}
+
+const smilePath = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "path",
+);
+smilePath.setAttribute("d", "M 74 137 Q 100 155 126 137");
+smilePath.setAttribute("fill", "none");
+smilePath.setAttribute("stroke", "#302c29");
+smilePath.setAttribute("stroke-width", "4");
+face.append(smilePath);
