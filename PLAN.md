@@ -2,7 +2,7 @@
 
 A bunch of symetric vitiligo patches
 
-# B assets: | Explored 
+# B assets: | Explored
 
 A facial tatoo
 
