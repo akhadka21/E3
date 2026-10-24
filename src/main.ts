@@ -63,6 +63,8 @@ mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
 
+const freckleOffset = 75;
+
   return face;
 }
 
