@@ -59,6 +59,8 @@ mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
 
+const freckleOffset = 75;
+
 portrait.append(face);
 
 spin.addEventListener("click", () => {
@@ -70,7 +72,6 @@ spin.addEventListener("click", () => {
   );
 });
 
-const freckleOffset = 75;
 
 for (let x = 0; x < 20; x++) {
   for (let i = 0; i < 10; i++) {
