@@ -77,3 +77,34 @@ spin.addEventListener("click", () => {
     { duration: 800, easing: "ease-in-out" },
   );
 });
+
+const freckleOffset = 75;
+
+for (let x = 0; x < 20; x++) {
+  for (let i = 0; i < 10; i++) {
+    const angle = (i / 10) * Math.PI * 2;
+    const dot = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "circle",
+    );
+    dot.setAttribute(
+      "cx",
+      String(
+        100 +
+          (freckleOffset - (4 * x)) *
+            (x % 2 ? Math.cos(angle) : Math.sin(angle)),
+      ),
+    );
+    dot.setAttribute(
+      "cy",
+      String(
+        100 +
+          (freckleOffset - (4 * x)) *
+            (x % 2 ? Math.sin(angle) : Math.cos(angle)),
+      ),
+    );
+    dot.setAttribute("r", "1");
+    dot.setAttribute("fill", "white");
+    face.append(dot);
+  }
+}
