@@ -1,6 +1,12 @@
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
+// @ts-types="./asset-url.d.ts"
+import glassesUrl from "./assets/97199-with-it-deal-glasses-free-hd-image.png";
+
+// @ts-types="./asset-url.d.ts"
+import wtpoohUrl from "./assets/126999-winnie-pooh.png";
+
 // The prototype grew inline. Keep it this way until the refactoring checkpoint.
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
@@ -69,3 +75,25 @@ spin.addEventListener("click", () => {
     { duration: 800, easing: "ease-in-out" },
   );
 });
+
+const glassesImage = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+glassesImage.setAttribute("href", glassesUrl);
+glassesImage.setAttribute("x", "25");
+glassesImage.setAttribute("y", "45");
+glassesImage.setAttribute("width", "150");
+glassesImage.setAttribute("height", "70");
+face.append(glassesImage);
+
+const bearImage = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+bearImage.setAttribute("href", wtpoohUrl);
+bearImage.setAttribute("x", "115");
+bearImage.setAttribute("y", "95");
+bearImage.setAttribute("width", "30");
+bearImage.setAttribute("height", "30");
+face.append(bearImage);
