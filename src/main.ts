@@ -1,5 +1,6 @@
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
+const freckleOffset = 75;
 
 // The prototype grew inline. Keep it this way until the refactoring checkpoint.
 function buildFace() {
@@ -53,17 +54,15 @@ function buildFace() {
   nose.setAttribute("stroke-linecap", "round");
   face.append(nose);
 
-const mouth = document.createElementNS("http://www.w3.org/2000/svg", "line");
-mouth.setAttribute("x1", "75");
-mouth.setAttribute("y1", "137");
-mouth.setAttribute("x2", "125");
-mouth.setAttribute("y2", "137");
-mouth.setAttribute("stroke", "#302c29");
-mouth.setAttribute("stroke-width", "4");
-mouth.setAttribute("stroke-linecap", "round");
-face.append(mouth);
-
-const freckleOffset = 75;
+  const mouth = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  mouth.setAttribute("x1", "75");
+  mouth.setAttribute("y1", "137");
+  mouth.setAttribute("x2", "125");
+  mouth.setAttribute("y2", "137");
+  mouth.setAttribute("stroke", "#302c29");
+  mouth.setAttribute("stroke-width", "4");
+  mouth.setAttribute("stroke-linecap", "round");
+  face.append(mouth);
 
   return face;
 }
@@ -79,7 +78,6 @@ spin.addEventListener("click", () => {
     { duration: 800, easing: "ease-in-out" },
   );
 });
-
 
 for (let x = 0; x < 20; x++) {
   for (let i = 0; i < 10; i++) {
