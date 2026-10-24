@@ -1,6 +1,6 @@
 # A geometry:
 
-A hundred freckles
+A bunch of symetric vitiligo patches
 
 # B assets:
 
