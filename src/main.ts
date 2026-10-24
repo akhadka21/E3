@@ -80,6 +80,7 @@ const glassesImage = document.createElementNS(
   "http://www.w3.org/2000/svg",
   "image",
 );
+
 glassesImage.setAttribute("href", glassesUrl);
 glassesImage.setAttribute("x", "25");
 glassesImage.setAttribute("y", "45");
