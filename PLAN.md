@@ -1,6 +1,11 @@
 # A geometry:
-  A hundred freckles
+
+A hundred freckles
+
 # B assets:
-  A facial tatoo
+
+A facial tatoo
+
 # C color and curves:
-  A red blush on the cheeks
+
+A red blush on the cheeks
